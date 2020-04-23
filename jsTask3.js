@@ -1,47 +1,53 @@
 //I'm trying to fall in love with JS. Tough love. @kingabesh and @jeff, you'll pro'lly never see this, but I think you guys rock. That being said...
+let numberArray = [];
 
-let parameterNumber = "10";
 
 let a = "yu";
 let b = "gi";
 let c = "oh";
 
 
-for (var i = 1; i <= parameterNumber; i++)
+for (let i = 1; i <= parameterNumber; i++)
 {
+
+  if (i % 2 == 0 && i % 3 == 0 && i % 5 == 0)
+  {
+    numberArray.push(a, "-", b, "-", c);
+  }
 
   if (i % 2 == 0 && i % 3 == 0)
   {
-    console.log(a, "-", b);
+    numberArray.push(a, "-", b);
   }
 
   else if (i % 2 == 0 && i % 5 == 0)
   {
-    console.log(a, "-", c);
+    numberArray.push(a, "-", c);
   }
 
 
   else if (i % 3 == 0 && i % 5 == 0)
   {
-    console.log(b, "-", c);
+    numberArray.push(b, "-", c);
   }
 
   else if (i % 2 == 0)
   {
-    console.log(a);
+    numberArray.push(a);
   }
 
   else if (i % 3 == 0)
   {
-    console.log(b);
+    numberArray.push(b);
   }
 
   else
   {
-    console.log(i);
+    numberArray.push(i);
   }
 
 };
 
 
+console.log(numberArray);
 //console.log (i++);
