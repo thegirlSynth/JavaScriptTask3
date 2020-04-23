@@ -17,31 +17,37 @@ function numberReplace(chosenNumber) {
       numberArray.push(a, "-", b, "-", c);
     }
 
-    if (i % 2 == 0 && i % 3 == 0)
+    if (i % 2 == 0 && i % 3 == 0 && i % 5 !== 0)
     {
       numberArray.push(a, "-", b);
     }
 
-    else if (i % 2 == 0 && i % 5 == 0)
+    else if (i % 2 == 0 && i % 5 == 0 && i % 3 !== 0)
     {
       numberArray.push(a, "-", c);
     }
 
 
-    else if (i % 3 == 0 && i % 5 == 0)
+    else if (i % 3 == 0 && i % 5 == 0 && i % 2 !== 0)
     {
       numberArray.push(b, "-", c);
     }
 
-    else if (i % 2 == 0)
+    else if (i % 2 == 0 && i % 3 !== 0 && i % 5 !== 0)
     {
       numberArray.push(a);
     }
 
-    else if (i % 3 == 0)
+    else if (i % 3 == 0 && i % 2 !== 0 && i % 5 !== 0)
     {
       numberArray.push(b);
     }
+
+    else if (i % 5 == 0 && i % 3 == 0 && i % 2 !== 0)
+    {
+      numberArray.push(c);
+    }
+
 
     else
     {
@@ -55,6 +61,6 @@ let randomNumber = Math.floor((Math.random() * 200) + 1);
 numberReplace(100);
 console.log(numberArray);
 
-numberReplace(randomNumber);
-console.log(numberArray);
+//numberReplace (randomNumber);
+//console.log (numberArray);
 //console.log (i++);
