@@ -50,8 +50,11 @@ function numberReplace(chosenNumber) {
 
   };
 }
+let randomNumber = Math.floor((Math.random() * 200) + 1);
 
 numberReplace(100);
+console.log(numberArray);
 
+numberReplace(randomNumber);
 console.log(numberArray);
 //console.log (i++);
