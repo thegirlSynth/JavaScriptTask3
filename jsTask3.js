@@ -67,4 +67,3 @@ console.log(numberArray);
 
 numberReplace (randomNumber);
 console.log (numberArray);
-console.log (i++);
