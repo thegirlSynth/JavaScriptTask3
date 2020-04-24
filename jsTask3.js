@@ -14,23 +14,27 @@ function numberReplace(chosenNumber) {
 
     if (i % 2 == 0 && i % 3 == 0 && i % 5 == 0)
     {
-      numberArray.push(a, "-", b, "-", c);
+      let newValue = a.concat("-", b, "-", c);
+      numberArray.push(newValue);
     }
 
-    if (i % 2 == 0 && i % 3 == 0 && i % 5 !== 0)
+    else if (i % 2 == 0 && i % 3 == 0 && i % 5 !== 0)
     {
-      numberArray.push(a, "-", b);
+      let newValue = a.concat("-", b);
+      numberArray.push(newValue);
     }
 
     else if (i % 2 == 0 && i % 5 == 0 && i % 3 !== 0)
     {
-      numberArray.push(a, "-", c);
+      let newValue = a.concat("-", c);
+      numberArray.push(newValue);
     }
 
 
     else if (i % 3 == 0 && i % 5 == 0 && i % 2 !== 0)
     {
-      numberArray.push(b, "-", c);
+      let newValue = b.concat("-", c);
+      numberArray.push(newValue);
     }
 
     else if (i % 2 == 0 && i % 3 !== 0 && i % 5 !== 0)
